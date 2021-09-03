@@ -17,7 +17,6 @@ module.exports = {
   Website: process.env.Website || "http://localhost", //Website where it was hosted at includes http or https || Use "0.0.0.0" if you using Heroku
 
   //Lavalink
-  /*
    Lavalink: {
     id: "Main",
     host: "lava.link",
@@ -25,7 +24,7 @@ module.exports = {
     pass: "youshallnotpass", 
     secure: false, // Set this to true if you're self-hosting lavalink on replit.
   },
-  */
+  /*
    //Lavalink11
   
    Lavalink: {
@@ -35,6 +34,7 @@ module.exports = {
     pass: "youshallnotpass", 
     secure: false, // Set this to true if you're self-hosting lavalink on replit.
   }
+  */
   //Alternate Lavalink
   /*
   Lavalink: {
