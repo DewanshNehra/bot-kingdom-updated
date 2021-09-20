@@ -25,6 +25,7 @@ module.exports = {
     let SearchString = args.join(" ");
     if (!args[0] && !player) return client.sendTime(message.channel, "❌ | **Nothing is playing right now...**");
     if (!args[0]) SongTitle = player.queue.current.title;
+    SongTitle = SongTitle.replace(/lyrics|lyric|lyrical|official music video|\(official music video\)|audio|official|official video|official video hd|official hd video|offical video music|\(offical video music\)|extended|hd|(\[.+\])/gi, "");
 
     let lyrics = await lyricsFinder(SongTitle);
     if (!lyrics) return client.sendTime(message.channel, `**No lyrics found for -** \`${SongTitle}\``);
@@ -34,7 +35,7 @@ module.exports = {
     let Pages = SplitedLyrics.map((ly) => {
       let em = new MessageEmbed()
         .setAuthor(`Lyrics for: ${SongTitle}`, client.botconfig.IconURL)
-        .setColor("RANDOM")
+        .setColor(client.botconfig.EmbedColor)
         .setDescription(ly.join("\n"));
 
       if (args.join(" ") !== SongTitle) em.setThumbnail(player.queue.current.displayThumbnail());
@@ -80,7 +81,7 @@ module.exports = {
       let Pages = SplitedLyrics.map((ly) => {
         let em = new MessageEmbed()
           .setAuthor(`Lyrics for: ${SongTitle}`, client.botconfig.IconURL)
-          .setColor("RANDOM")
+          .setColor(client.botconfig.EmbedColor)
           .setDescription(ly.join("\n"));
 
         if (SongTitle !== SongTitle) em.setThumbnail(player.queue.current.displayThumbnail());
