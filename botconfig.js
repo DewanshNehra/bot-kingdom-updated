@@ -58,7 +58,7 @@ module.exports = {
   Lavalink: {
     id: "Main",
     host: "calm-basin-44222.herokuapp.com",
-    port: DYNAMICPORT,
+    port: 80,
     pass: "helloworld", 
     secure: false // Set this to true if you're self-hosting lavalink on replit.
   },
