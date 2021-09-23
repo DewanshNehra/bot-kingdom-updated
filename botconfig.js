@@ -46,7 +46,7 @@ module.exports = {
     secure: false // Set this to true if you're self-hosting lavalink on replit.
   },
   */
-  
+  /*
   Lavalink: {
     id: "Main",
     host: "lavalink-replit.dewansnehra.repl.co",
@@ -54,8 +54,14 @@ module.exports = {
     pass: "helloworld", 
     secure: true // Set this to true if you're self-hosting lavalink on replit.
   },
- 
-
+ */
+  Lavalink: {
+    id: "Main",
+    host: "calm-basin-44222.herokuapp.com",
+    port: DYNAMICPORT,
+    pass: "helloworld", 
+    secure: true // Set this to true if you're self-hosting lavalink on replit.
+  },
   //Please go to https://developer.spotify.com/dashboard/
   Spotify: {
     ClientID: process.env.Spotify_ClientID || "", //Spotify Client ID
