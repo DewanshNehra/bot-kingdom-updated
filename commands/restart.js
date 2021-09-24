@@ -13,7 +13,7 @@ module.exports = {
 		if (message.author.id !== '746777830121013349') {
 			return message.channel.send('You cannot use this command!');
 		}
-		await message.channel.send('Restarting bot...');
+		await message.channel.send('Restarting bot...give it 2 sec');
 		return process.exit();
 	},
 };
