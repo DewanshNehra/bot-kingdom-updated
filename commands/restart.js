@@ -10,10 +10,10 @@ module.exports = {
   },
   aliases: ["rs", "rst"],
   run: async (client, message, args) => {
-		if (message.author.id !== '746777830121013349') {
+		if (message.author.id === '781530231114563584') {
 			return message.channel.send('You cannot use this command!');
 		}
-		await message.channel.send('Restarting bot...give it 2 sec');
+		await message.channel.send('Restarting bot...(DONT REPEACT THE CMD AFTER EVERY SEC GIVE A TIME OF 10 MIN B/W EVERY RESTART :)');
 	        process.exit()
                 
 		
