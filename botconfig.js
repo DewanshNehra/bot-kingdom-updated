@@ -64,14 +64,13 @@ module.exports = {
     secure: false // Set this to true if you're self-hosting lavalink on replit.
   },*/
   
-  //LAVA LINK SINGAPORE SERVER DETAILS
-Lavalink: {
-id: “Main”,
-host: “node3.rockbusterhostings.in.net”,
-port: 65535,
-pass: “pass134”,
-secure: false,
-},
+  Lavalink: {
+    id: "Main",
+    host: "node3.rockbusterhostings.in.net",
+    port: 65535,
+    pass: "pass134", 
+    secure: false, // Set this to true if you're self-hosting lavalink on replit.
+  },
   //Please go to https://developer.spotify.com/dashboard/
   Spotify: {
     ClientID: process.env.Spotify_ClientID || "", //Spotify Client ID
