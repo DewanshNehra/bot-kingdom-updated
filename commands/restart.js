@@ -14,7 +14,9 @@ module.exports = {
 			return message.channel.send('You cannot use this command!');
 		}
 		await message.channel.send('Restarting bot...give it 2 sec');
-		return process.exit();
+	        .then(()=>bot.destroy()),
+                .then(()=>bot.login(config.token))
+		
 	},
 };
 	
