@@ -66,7 +66,7 @@ module.exports = {
   
   Lavalink: {
     id: "Main",
-    host: "node3.rockbusterhostings.in.net",
+    host: "singapore.lavalink.org",
     port: 65535,
     pass: "pass134", 
     secure: false, // Set this to true if you're self-hosting lavalink on replit.
