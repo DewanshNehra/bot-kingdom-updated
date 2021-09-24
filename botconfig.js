@@ -66,9 +66,9 @@ module.exports = {
   
   Lavalink: {
     id: "Main",
-    host: "lavalink.cgofficial.org",
-    port: 2333,
-    pass: "youshallnotpass", 
+    host: "lava.darrennathanael.com",
+    port: 2095,
+    pass: "whatwasthelastingyousaid", 
     secure: false, // Set this to true if you're self-hosting lavalink on replit.
   },
   //Please go to https://developer.spotify.com/dashboard/
