@@ -15,7 +15,7 @@ module.exports = {
 		}
 		await message.channel.send('Restarting bot...give it 2 sec');
 	        bot.destroy(),
-                bot.login(config.token))
+                
 		
 	},
 };
