@@ -16,3 +16,5 @@ module.exports = {
 		await message.channel.send('Restarting bot...');
 		return process.exit();
 	},
+};
+	
