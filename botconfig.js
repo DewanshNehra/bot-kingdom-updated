@@ -70,14 +70,14 @@ module.exports = {
     pass: "helloworld", 
     secure: false // Set this to true if you're self-hosting lavalink on replit.
   },*/
-  /*
+  
   Lavalink: {
     id: "Main",
-    host: "lava.darrennathanael.com",
-    port: 2095,
-    pass: "whatwasthelastingyousaid", 
-    secure: false, // Set this to true if you're self-hosting lavalink on replit.
-  },*/
+    host: "endstone.mcworld.cc",
+    port: 25992,
+    pass: "helloworld", 
+    secure: true, // Set this to true if you're self-hosting lavalink on replit.
+  },
   //Please go to https://developer.spotify.com/dashboard/
   Spotify: {
     ClientID: process.env.Spotify_ClientID || "", //Spotify Client ID
