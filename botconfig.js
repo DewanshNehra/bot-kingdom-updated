@@ -76,7 +76,7 @@ module.exports = {
     host: "endstone.mcworld.cc",
     port: 25773,
     pass: "youshallnotpass", 
-    secure: true, // Set this to true if you're self-hosting lavalink on replit.
+    secure: false, // Set this to true if you're self-hosting lavalink on replit.
   },/*
      Lavalink: {
     id: "Main",
