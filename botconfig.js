@@ -17,7 +17,7 @@ module.exports = {
   Website: process.env.Website || "http://localhost", //Website where it was hosted at includes http or https || Use "0.0.0.0" if you using Heroku
 
   //Lavalink
- 
+ /*
    Lavalink: {
     id: "Main",
     host: "lava.link",
@@ -25,7 +25,7 @@ module.exports = {
     pass: "youshallnotpass", 
     secure: false, // Set this to true if you're self-hosting lavalink on replit.
   },
-/*/*
+/*
    Lavalink: {
     id: "Main",
     host: "lavalink.dornbot.ml",
@@ -78,6 +78,14 @@ module.exports = {
     pass: "helloworld", 
     secure: false, // Set this to true if you're self-hosting lavalink on replit.
   },*/
+     Lavalink: {
+    id: "Main",
+    host: "152.70.180.50",
+    port: 2333,
+    pass: "youshallnotpass", 
+    secure: false, // Set this to true if you're self-hosting lavalink on replit.
+  },
+  
   //Please go to https://developer.spotify.com/dashboard/
   Spotify: {
     ClientID: process.env.Spotify_ClientID || "", //Spotify Client ID
