@@ -81,8 +81,8 @@ module.exports = {
      Lavalink: {
     id: "Main",
     host: "152.70.180.50",
-    port: 8080,
-    pass: "youshallnotpass", 
+    port: 2333,
+    pass: "ubuntuserver", 
     secure: false, // Set this to true if you're self-hosting lavalink on replit.
   },
   
