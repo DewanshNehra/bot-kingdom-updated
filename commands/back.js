@@ -13,14 +13,13 @@ module.exports = {
     
     run: async (client, message, args, { GuildDB }) => {
         let player = await client.Manager.get(message.guild.id);
-        if (!player) return client.sendTime(message.channel, "❌ | **Nothing is playing right now...**");
-        const queue = player.Queue(message.guild.id);
+    
         
-        if (!queue || !queue.playing) return message.channel.send(`No music currently playing ${message.author}... try again ? ❌`);
+        if (!player || !player.playing) return message.channel.send(`No music currently playing ${message.author}... try again ? ❌`);
 
-        if (!queue.previousTracks[1]) return message.channel.send(`There was no music played before ${message.author}... try again ? ❌`);
+        if (!player.previousTracks[1]) return message.channel.send(`There was no music played before ${message.author}... try again ? ❌`);
 
-        await queue.back();
+        await player.queue.back();
 
         message.channel.send(`Playing the **previous** track ✅`);
     },
