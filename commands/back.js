@@ -4,23 +4,31 @@ const { TrackUtils } = require("erela.js");
 module.exports = {
     name: 'back',
     aliases: ['previous'],
-    description: "Goes back to the previous song.",
+    description: "Moves a track to the front of the queue.",
     usage: "",
     permissions: {
         channel: ["VIEW_CHANNEL", "SEND_MESSAGES", "EMBED_LINKS"],
         member: [],
-    },
+},
     
-    run: async (client, message, args, { GuildDB }) => {
-        let player = await client.Manager.get(message.guild.id);
-        const queue = player.getQueue(message.guild.id);
-        
-        if (!queue || !queue.playing) return message.channel.send(`No music currently playing ${message.author}... try again ? ❌`);
+    /**
+     *
+     * @param {import("../structures/DiscordMusicBot")} client
+     * @param {import("discord.js").Message} message
+     * @param {string[]} args
+     * @param {*} param3
+     */
+    run: async (client, interaction, args, { GuildDB }) => {
+        if (!message.member.voice.channel) return message.channel.send(`${client.emotes.error} - You're not in a voice channel !`);
 
-        if (!queue.previousTracks[1]) return message.channel.send(`There was no music played before ${message.author}... try again ? ❌`);
+        if (message.guild.me.voice.channel && message.member.voice.channel.id !== message.guild.me.voice.channel.id) return message.channel.send(`${client.emotes.error} - You are not in the same voice channel !`);
 
-        await queue.back();
+        if (!client.player.getQueue(message)) return message.channel.send(`${client.emotes.error} - No music currently playing !`);
 
-        message.channel.send(`Playing the **previous** track ✅`);
+        if (client.player.getQueue(message).previousTracks.length < 1) return message.channel.send(`${client.emotes.error}` - No previous track was found !);
+
+        client.player.back(message);
+
+        message.channel.send(`${client.emotes.success} - Playing back the previous song !`);
     },
 };
