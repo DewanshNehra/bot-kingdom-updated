@@ -9,9 +9,10 @@ module.exports = {
     permissions: {
         channel: ["VIEW_CHANNEL", "SEND_MESSAGES", "EMBED_LINKS"],
         member: [],
-    },
+     voiceChannel: true,    
+    },    
     
-    run: async (client, message, args, { GuildDB }) => {
+    async execute(client, message)  => {
         const queue = player.getQueue(message.guild.id);
         
         if (!queue || !queue.playing) return message.channel.send(`No music currently playing ${message.author}... try again ? ❌`);
