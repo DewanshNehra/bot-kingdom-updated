@@ -50,11 +50,8 @@
     "pretty-ms": "^7.0.1",
     "socket.io": "^4.0.1",
     "winston": "^3.3.3",
-    "discord-player": "^5.1.0",
     "slash-create": "^4.0.1",
-    "ffmpeg-static": "^4.4.0",
-    "ms": "^3.0.0-canary.1",
-    "opusscript": "^0.0.8"
+
   },
   "devDependencies": {
     "prettier": "2.4.1"
