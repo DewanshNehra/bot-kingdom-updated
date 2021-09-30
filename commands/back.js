@@ -15,6 +15,8 @@ module.exports = {
 
     run: async (client, message, args, { GuildDB }) => {
         const queue = player.getQueue(message.guild.id);
+        let player = await client.Manager.get(message.guild.id);
+
 
         if (!queue || !queue.playing) return message.channel.send(`No music currently playing ${message.author}... try again ? ❌`);
 
