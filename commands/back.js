@@ -19,7 +19,7 @@ module.exports = {
      * @param {*} param3
      */
     run: async (client, message, args, { GuildDB }) => {
-    const player = client.manager.get(message.guild.id);
+    const player = client.Manager.get(message.guild.id);
 
     if (!player)
       return client.say.ErrorMessage(message, "The bot is currently not playing.");
