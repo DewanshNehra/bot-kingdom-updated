@@ -7,6 +7,10 @@ module.exports = {
     description: "Goes back to the previous song.",
     utilisation: '{prefix}back',
     voiceChannel: true,
+     permissions: {
+        channel: ["VIEW_CHANNEL", "SEND_MESSAGES", "EMBED_LINKS"],
+        member: [],
+    },
 
     async execute(client, message) {
         const queue = player.getQueue(message.guild.id);
