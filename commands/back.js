@@ -4,22 +4,13 @@ const { TrackUtils } = require("erela.js");
 module.exports = {
     name: 'back',
     aliases: ['previous'],
-    description: "Goes back to the previous song.",
-    utilisation: '{prefix}back',
-    voiceChannel: true,
+    description: "Goes back to the previous song."
     usage: "",
      permissions: {
         channel: ["VIEW_CHANNEL", "SEND_MESSAGES", "EMBED_LINKS"],
         member: [],
     },
-    /**
-     *
-     * @param {import("../structures/DiscordMusicBot")} client
-     * @param {import("discord.js").Message} message
-     * @param {string[]} args
-     * @param {*} param3
-     */
-
+    
     run: async (client, message, args, { GuildDB }) => {
         let player = await client.Manager.get(message.guild.id);
         const queue = player.getQueue(message.guild.id);
