@@ -19,16 +19,21 @@ module.exports = {
      * @param {*} param3
      */
     run: async (client, message, args, { GuildDB }) => {
-        if (!message.member.voice.channel) return message.channel.send(`${client.emotes.error} - You're not in a voice channel !`);
+    const player = bot.manager.get(message.guild.id);
 
-        if (message.guild.me.voice.channel && message.member.voice.channel.id !== message.guild.me.voice.channel.id) return message.channel.send(`${client.emotes.error} - You are not in the same voice channel !`);
+    if (!player)
+      return bot.say.ErrorMessage(message, "The bot is currently not playing.");
 
-        if (!client.player.getQueue(message)) return message.channel.send(`${client.emotes.error} - No music currently playing !`);
+    if (!bot.canModifyQueue(message)) return;
 
-        if (client.player.getQueue(message).previousTracks.length < 1) return message.channel.send(`${client.emotes.error} - No previous track was found !`);
+    const track = player.queue.previous;
 
-        client.player.back(message);
+    if (!track)
+      return bot.say.WarnMessage(message, "No previous track was found.");
 
-        message.channel.send(`${client.emotes.success} - Playing back the previous song !`);
-    },
+    player.queue.add(track, 0);
+    player.stop();
+
+    return bot.say.QueueMessage(bot, player, "Backed to the previous song.");
+  }
 };
