@@ -1,29 +1,26 @@
 const { MessageEmbed } = require("discord.js");
 const { TrackUtils } = require("erela.js");
-const { SlashCommand } = require('slash-create');
 
-
-module.exports = class extends SlashCommand {
-    constructor(creator) {
-        super(creator, {
-            name: 'back',
-            description: 'Play the previous track',
-
-            guildIDs: process.env.DISCORD_GUILD_ID ? [ process.env.DISCORD_GUILD_ID ] : undefined
-        });
-    }
-
-    async run (ctx) {
-
-        const { client } = require('..');
-
-        await ctx.defer();
-
-        const queue = client.player.getQueue(ctx.guildID);
-        if (!queue || !queue.playing) return void ctx.sendFollowUp({ content: '❌ | No music is being played!' });
+module.exports = {
+    name: 'back',
+    aliases: ['previous'],
+    description: "Goes back to the previous song.",
+    usage: "",
+    permissions: {
+        channel: ["VIEW_CHANNEL", "SEND_MESSAGES", "EMBED_LINKS"],
+        member: [],
+    },
+    
+    run: async (client, message, args, { GuildDB }) => {
+        let player = await client.Manager.get(message.guild.id);
+       
         
+        if (!queue || !queue.playing) return message.channel.send(`No music currently playing ${message.author}... try again ? ❌`);
+
+        if (!queue.previousTracks[1]) return message.channel.send(`There was no music played before ${message.author}... try again ? ❌`);
+
         await queue.back();
 
-        ctx.sendFollowUp({ content: '✅ | Playing the previous track!' });
-    }
+        message.channel.send(`Playing the **previous** track ✅`);
+    },
 };
