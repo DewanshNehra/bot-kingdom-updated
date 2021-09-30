@@ -7,12 +7,13 @@ module.exports = {
     description: "Goes back to the previous song.",
     utilisation: '{prefix}back',
     voiceChannel: true,
+    usage: "",
      permissions: {
         channel: ["VIEW_CHANNEL", "SEND_MESSAGES", "EMBED_LINKS"],
         member: [],
     },
 
-    async execute(client, message) {
+    run: async execute(client, message) {
         const queue = player.getQueue(message.guild.id);
 
         if (!queue || !queue.playing) return message.channel.send(`No music currently playing ${message.author}... try again ? ❌`);
