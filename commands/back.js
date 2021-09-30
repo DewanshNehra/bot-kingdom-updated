@@ -4,7 +4,8 @@ const { TrackUtils } = require("erela.js");
 module.exports = {
     name: 'back',
     aliases: ['previous'],
-    description: "Goes back to the previous song."
+    description: "Goes back to the previous song.",
+    usage: "",
     permissions: {
         channel: ["VIEW_CHANNEL", "SEND_MESSAGES", "EMBED_LINKS"],
         member: [],
