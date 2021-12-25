@@ -1,4 +1,4 @@
-const { MessageEmbed } = require("discord.js");
+/*const { MessageEmbed } = require("discord.js");
 const { TrackUtils } = require("erela.js");
 
 module.exports = {
@@ -24,3 +24,4 @@ module.exports = {
         message.channel.send(`Playing the **previous** track ✅`);
     },
 };
+*/
