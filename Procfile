@@ -1,2 +1,2 @@
 worker: node index.js ,
-web: runserver 0.0.0.0:$PORT
+web: node views/index.html runserver 0.0.0.0:$PORT
