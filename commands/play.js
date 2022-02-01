@@ -26,7 +26,7 @@ module.exports = {
         let CheckNode = client.Manager.nodes.get(client.botconfig.Lavalink.id);
         let Searching = await message.channel.send(":mag_right: Searching...");
         if (!CheckNode || !CheckNode.connected) {
-       return client.sendTime(message.channel,"❌ | **Lavalink node not connected . Hi i am sorry but the paid vps that i was using was costing me a lot and i don't have the money left now so i am trying to find a alternative it can happen today also or it may take 1-2 days so please have some patience i am working on it i am really sorry for the inconvenience i hope u understand :)) --newname :((  **");
+       return client.sendTime(message.channel,"❌ | Lavalink node not connected . **Hi i am sorry but the paid vps that i was using was costing me a lot and i don't have the money left now so i am trying to find a alternative it can happen today also or it may take 1-2 days so please have some patience i am working on it i am really sorry for the inconvenience i hope u understand :)) --newname :((  **");
         }
         const player = client.Manager.create({
             guild: message.guild.id,
@@ -127,7 +127,7 @@ module.exports = {
             if (guild.me.voice.channel && !guild.me.voice.channel.equals(member.voice.channel)) return client.sendTime(interaction, ":x: | **You must be in the same voice channel as me to use this command!**");
             let CheckNode = client.Manager.nodes.get(client.botconfig.Lavalink.id);
             if (!CheckNode || !CheckNode.connected) {
-              return client.sendTime(interaction,"❌ | **Lavalink node not connected . Hi i am sorry but the paid vps that i was using was costing me a lot and i don't have the money left now so i am trying to find a alternative it can  happen today also or it may take 1-2 days so please have some patience i am working on it i am really sorry for the inconvenience i hope u understand :)) --newname :((**");
+              return client.sendTime(interaction,"❌ | Lavalink node not connected . **Hi i am sorry but the paid vps that i was using was costing me a lot and i don't have the money left now so i am trying to find a alternative it can  happen today also or it may take 1-2 days so please have some patience i am working on it i am really sorry for the inconvenience i hope u understand :)) --newname :((**");
             }
     
             let player = client.Manager.create({
