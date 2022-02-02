@@ -127,7 +127,7 @@ module.exports = {
             if (guild.me.voice.channel && !guild.me.voice.channel.equals(member.voice.channel)) return client.sendTime(interaction, ":x: | **You must be in the same voice channel as me to use this command!**");
             let CheckNode = client.Manager.nodes.get(client.botconfig.Lavalink.id);
             if (!CheckNode || !CheckNode.connected) {
-              return client.sendTime(interaction,"❌ | Lavalink node not connected . **Hi i am sorry again this should not happens but just tag this idiot ```newname#9981``` i will tell him to look into it he is most probably sleeping right now sry :)) **"");
+              return client.sendTime(interaction,"❌ | Lavalink node not connected . **Hi i am sorry again this should not happens but just tag this idiot ```newname#9981``` i will tell him to look into it he is most probably sleeping right now sry :)) **");
             }
     
             let player = client.Manager.create({
