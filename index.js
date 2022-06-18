@@ -1,5 +1,4 @@
-const DiscordMusicBot = require("./structures/DiscordMusicBot");
-const DiscordMusicBot = require('newrelic');
+const DiscordMusicBot = require("./structures/DiscordMusicBot",'newrelic');
 const client = new DiscordMusicBot();
 
 client.build();
