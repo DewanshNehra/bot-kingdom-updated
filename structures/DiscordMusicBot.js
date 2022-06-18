@@ -10,6 +10,11 @@ const Express = require("express");
 const Logger = require("./Logger");
 const prettyMilliseconds = require("pretty-ms");
 const newrelic = require('newrelic');
+newrelic.instrumentLoadedModule(
+  'express',    // the module's name, as a string
+  expressModule // the module instance
+);
+
 
 //Class extending Stuff
 require("discordjs-activity"); //Epic Package, For more details: https://www.npmjs.com/package/discordjs-activity
