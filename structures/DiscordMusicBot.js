@@ -9,6 +9,7 @@ const path = require("path");
 const Express = require("express");
 const Logger = require("./Logger");
 const prettyMilliseconds = require("pretty-ms");
+const newrelic = require('newrelic');
 
 //Class extending Stuff
 require("discordjs-activity"); //Epic Package, For more details: https://www.npmjs.com/package/discordjs-activity
