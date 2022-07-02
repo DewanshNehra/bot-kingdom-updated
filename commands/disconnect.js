@@ -20,7 +20,7 @@ module.exports = {
     let player = await client.Manager.get(message.guild.id);
     if (!message.member.voice.channel) return client.sendTime(message.channel, "❌ | **You must be in a voice channel use this command**");
     if (!player) return client.sendTime(message.channel,"❌ | **Nothing is playing right now...**");
-    await client.sendTime(message.channel,":notes: | **Disconnected! ** ``` Never Trust a person no matter how good he/she is becuase one day you will regret trusting that person and no matter how much you say now that this person will be there for you but believe me when you will need this person the most he/she will not be there for you no matter how much you do for them becoause it does not fucking matter, all that matter is there own happiness to them.It will end someday believe me.**Try to be happy everyday.** ``` ```-newname#9981``` ");
+    await client.sendTime(message.channel,":notes: | **Disconnected! ** ``` Never Trust a person no matter how good he/she is becuase one day you will regret trusting that person and no matter how much you say now that this person will be there for you but believe me when you will need this person the most he/she will not be there for you no matter how much you do for them because it does not fucking matter, all that matter is there own happiness to them.It will end someday believe me.  Try to be happy everyday. ``` ```-newname#9981``` ");
     await message.react("✅");
     player.destroy();
   },
